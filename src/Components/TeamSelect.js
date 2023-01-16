@@ -12,10 +12,10 @@ const TeamSelect = () => {
     const [team, setTeam] = value4
     const [name, setName] = useState('')
 
-    const handleClick = () => {
+    const handleClick = (e) => {
 
-        setTeam( [...team, {name : name}] )
-
+        setTeam( [...team, e ])
+        console.log(e)
         }  
 
 
@@ -32,7 +32,7 @@ const TeamSelect = () => {
         <div key={e.name} className="pokelist">
             <h1>{e.name}</h1>
 
-            <img onClick={(i) => handleClick(e.name)} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${i +1}.gif`}    
+            <img onClick={() => handleClick(e)} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${i +1}.gif`}    
             alt="" /> 
             </div>
       ) })}

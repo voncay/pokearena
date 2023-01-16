@@ -16,8 +16,15 @@ const Team = () => {
          } )
 };
 
+const getUrl = (url) => {
+    url.preventDefault()
+    url = url.split('/')
+    url = url[6]
+    return url
+}
 
-// console.log(team)
+
+
 return (
     <div className="teamframe">
     { team.length > 0 ? 
@@ -26,7 +33,7 @@ return (
         <div className="pokelist">
             <h1>{e.name}</h1>
 
-            <img onClick={handleDelete} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${i +1}.gif`}    
+            <img onClick={handleDelete} src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${i}.gif`}    
             alt="" /> 
             </div>
      
