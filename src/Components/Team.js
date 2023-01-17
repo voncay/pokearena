@@ -4,28 +4,31 @@ import {PokeContext} from "../Context/PokeContext"
 import axios from "axios"
 const Team = () => {
 
-    const {value4} = useContext(PokeContext)
+    const {value4, value1} = useContext(PokeContext)
     const [team, setTeam] = value4
-
+    const [load, setLoad] = value1
 
     const handleDelete = (e) => {
         setTeam((oldState) => {  
             return [...oldState].filter((e) => e.name !== team.name )
 
          } )
-};
+    };
 
 
-const addUrlIdToTeams = () => {
-    const teamUpdated = team
-
-    team.map( e => {
+const addUrlIdToTeams =  () => {
+    
+  const teamUpdated = team
+    
+        team.map( (e) => {
         const split = e.url.split('/')
         const pokemonID = split[6]
         e.imageUrlId = pokemonID
         e.imageUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/${pokemonID}.gif`
-        
-    })
+        })
+
+    console.log(team)
+
 
     return teamUpdated
 }
@@ -33,7 +36,18 @@ const addUrlIdToTeams = () => {
 const teamUpdated = addUrlIdToTeams()
 
 setTeam(teamUpdated)
+var results = []
+const newTeam = async (results) => {
 
+    const responses = await Promise.all(
+        team.map(async (e, i) => (await axios.get(`https://pokeapi.co/api/v2/pokemon/${e.imageUrlId}`)).data )
+    )
+    results.push(responses)
+    return responses
+}
+
+newTeam(results)
+console.log(results)
 
 // const fetchPokeDetails = async () => {
 
@@ -54,24 +68,9 @@ setTeam(teamUpdated)
 
 // }, [])
 
-// const [battleTeam, setBattleTeam] = useState({0: {}, 1:{}, 2: {}, 3:{}})
-
-// team.map((e, i) => fetchInfos(i))
 
 
-// const fetchInfos =  async (i) => {
-//    try {
-//        const callData = await axios.get(`url/${team[i].pokemonID}`)
-//        setBattleTeam( [...battleTeam, {i :  callData.data}])
-//    } catch (err) {
-//        console.log(err)
-//    }
-// }
 
-// useEffect(() => {
-//     fetchInfos()
-
-// }, [])
 
 
 
@@ -79,6 +78,7 @@ setTeam(teamUpdated)
 
 
 return (
+    <>
     <div className="teamframe">
     { team.length > 0 ? 
     ( team.map((e,i) =>
@@ -93,6 +93,8 @@ return (
     ) ) : <p>Select a pokemom</p>
     }
     </div>
+   
+    </>
 )
 
 }

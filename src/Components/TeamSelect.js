@@ -1,6 +1,7 @@
 import React from "react"
 import { useContext,useState } from "react"
 import {PokeContext} from "../Context/PokeContext"
+import {Link} from "react-router-dom"
 import Team from './Team'
 
 
@@ -23,9 +24,12 @@ const TeamSelect = () => {
 // console.log(getUrl())
 
     const handleClick = (e) => {
-        team.length < 4 ? 
+        console.log(e)
+       
+       team.length < 4 ? 
             setTeam( [...team, e ])
-            : team.shift() && setTeam( [...team, e ]) // remove first element and add new last element
+           : team.shift() && setTeam( [...team, e ]) 
+            // remove first element and add new last element
     }  
 
     return(
@@ -43,9 +47,17 @@ const TeamSelect = () => {
             </div>
       ) })}
         </div>
-    {/* {team.length > 0 && <Team />} */}
-    <Team />
+    {team.length > 0 && <Team />}  
+    {team.length === 4 &&
+    
+    <Link>
+     <h1 className="teamok">Hajime ! </h1>
+     </Link>
+     } 
     </div>
+
+
+
     )
 }
 
