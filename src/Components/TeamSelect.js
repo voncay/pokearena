@@ -23,7 +23,9 @@ const TeamSelect = () => {
 // console.log(getUrl())
 
     const handleClick = (e) => {
-        setTeam( [...team, e ])
+        team.length < 4 ? 
+            setTeam( [...team, e ])
+            : team.shift() && setTeam( [...team, e ]) // remove first element and add new last element
     }  
 
     return(
