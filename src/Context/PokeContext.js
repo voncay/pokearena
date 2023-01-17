@@ -11,6 +11,7 @@ const [load, setLoad] = useState(false);
 const [pokemon2, setPokemon2] = useState([])
 const [input, setInput] = useState("")
 const [team, setTeam] = useState([])
+const [p1Team, setP1Team] = useState([])
 
 const fetchData = async () => {
 
@@ -32,26 +33,59 @@ useEffect(() => {
 
 }, [] )
 
-const fetchData2 = async () => {
 
-    try{
-        const callData = await axios.get(
-            `https://pokeapi.co/api/v2/pokemon/${input}`)
-            setPokemon2(input)
-            setPokemon2(callData.data);
-            setLoad(true);
+
+// let createP1Team = []
+
+
+// team.length > 0 && team.map( e => 
+//   createP1Team.push(populateArray(e))
+// )
+
+// const populateArray = async (e) => {
+//   try{
+//       const callData = await axios.get(
+//           `https://pokeapi.co/api/v2/pokemon/${e.pokemonID}`)
+          
+//         const pokemonDetails = callData.data;
+//           setLoad(true);
+//         return pokemonDetails
+//   }
+//   catch (err) {
+//       console.log(err);
+//   }
+
+// }
+
+// useEffect(() => {
+//     populateArray()
+
+//   }, []  )
+
+// setP1Team(createP1Team)
+
+// const fetchData2 = async () => {
+
+//     try{
+//         const callData = await axios.get(
+//             `https://pokeapi.co/api/v2/pokemon/${team.pokemonID}`)
+//             setPokemon2(input)
+//             setPokemon2(callData.data);
+//             setLoad(true);
     
-    }
-    catch (err) {
-        console.log(err);
-      }
-}
+//     }
+//     catch (err) {
+//         console.log(err);
+//       }
+// }
 
-useEffect(() => {
 
-    fetchData2()
+// useEffect(() => {
 
-}, [input] )
+//     fetchData2()
+
+// }, [input] )
+
 
 return (
         <PokeContext.Provider
@@ -61,7 +95,8 @@ return (
              value1 : [load, setLoad], 
              value2 : [pokemon2, setPokemon2],
              value3 : [input, setInput],
-             value4 : [team, setTeam]
+             value4 : [team, setTeam],
+             value5 : [p1Team, setP1Team],
 
           }}>
 

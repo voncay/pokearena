@@ -10,17 +10,21 @@ const TeamSelect = () => {
     const {value, value2, value3, value4} = useContext(PokeContext)
     const [pokemon, setPokemon] = value
     const [team, setTeam] = value4
-    const [name, setName] = useState('')
+
+// const getUrl = () => {
+
+//   const url =  team.map((e,i) => 
+
+//    e.url.split('/')  ) 
+
+//   const newid = url[6]
+//     return newid
+// }
+// console.log(getUrl())
 
     const handleClick = (e) => {
-
         setTeam( [...team, e ])
-        console.log(e)
-        }  
-
-
-    
-
+    }  
 
     return(
     
