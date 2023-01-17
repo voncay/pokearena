@@ -11,7 +11,7 @@ const [load, setLoad] = useState(false);
 const [pokemon2, setPokemon2] = useState([])
 const [input, setInput] = useState("")
 const [team, setTeam] = useState([])
-const [p1Team, setP1Team] = useState([])
+const [playerTeam, setPlayerTeam] = useState([])
 
 const fetchData = async () => {
 
@@ -96,8 +96,7 @@ return (
              value2 : [pokemon2, setPokemon2],
              value3 : [input, setInput],
              value4 : [team, setTeam],
-             value5 : [p1Team, setP1Team],
-
+             value5 : [playerTeam, setPlayerTeam],
           }}>
 
                 { load && children }

@@ -8,10 +8,11 @@ import Team from './Team'
 
 const TeamSelect = () => {
 
-    const {value, value2, value3, value4} = useContext(PokeContext)
+    const {value, value1, value2, value3, value4, value5} = useContext(PokeContext)
     const [pokemon, setPokemon] = value
     const [team, setTeam] = value4
-
+    const [load, setLoad] = value1
+    const [playerTeam, setPlayerTeam] = value5
 // const getUrl = () => {
 
 //   const url =  team.map((e,i) => 
@@ -26,9 +27,9 @@ const TeamSelect = () => {
     const handleClick = (e) => {
         console.log(e)
        
-       team.length < 4 ? 
+       team.length < 4 &&
             setTeam( [...team, e ])
-           : team.shift() && setTeam( [...team, e ]) 
+        //    : team.shift() && setTeam( [...team, e ]) 
             // remove first element and add new last element
     }  
 
@@ -48,9 +49,9 @@ const TeamSelect = () => {
       ) })}
         </div>
     {team.length > 0 && <Team />}  
-    {team.length === 4 &&
+    {team.length === 4 && 
     
-    <Link>
+    <Link className="beginlink "to="/intro">
      <h1 className="teamok">Hajime ! </h1>
      </Link>
      } 

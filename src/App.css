@@ -137,3 +137,19 @@ width: 80px;
   }
 
 
+.beginlink {
+  text-decoration: none;
+}
+
+.pteamimg{
+  max-width: 50px;
+}
+
+.teamframeintro{
+  position:absolute;
+  left:25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
