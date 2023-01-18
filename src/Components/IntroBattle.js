@@ -12,9 +12,6 @@ const IntroBattle = () => {
   const [pokemon, setPokemon] = value;
 
 
-console.log(playerTeam)
-
-
 
 
   return (
