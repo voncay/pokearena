@@ -12,7 +12,7 @@ const IntroBattle = () => {
   const [pokemon, setPokemon] = value;
 
 
-console.log('poke',pokemon[111])
+console.log(playerTeam)
 
 
 
@@ -44,7 +44,7 @@ console.log('poke',pokemon[111])
       <h1 className='gymleadtitle'>Which Gym Leader do you want to battle ?</h1>
                   <div className="gymleaders">
                     <div className="gymleadcolumn">
-                     <Link to="">
+                     <Link to="/battlebrock">
                      <img src="/brock_rock.png" alt="" />
                      </Link>
                      <h1>Brock<br/>The Rock/Ground type <br/>Pokemon Master !</h1>
