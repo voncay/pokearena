@@ -1,0 +1,360 @@
+[
+    {
+        "Brock": {
+            "pokemon1": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/95.gif",
+                "pokemonName": "Onix",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "rock",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Rock Slide",
+                        "damage": 30,
+                        "type": "rock"
+                    },
+                    "attackTwo": {
+                        "name": "Flail",
+                        "damage": 40,
+                        "type": "rock"
+                    },
+                    "attackThree": {
+                        "name": "Stone Axe",
+                        "damage": 55,
+                        "type": "rock"
+                    },
+                    "attackFour": {
+                        "name": "Rockfall",
+                        "damage": 50,
+                        "type": "rock"
+                    }
+                }
+            },
+            "pokemon2": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/76.gif",
+                "pokemonName": "Golem",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "rock",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Rock Smash",
+                        "damage": 40,
+                        "type": "rock"
+                    },
+                    "attackTwo": {
+                        "name": "Salt Cure",
+                        "damage": 45,
+                        "type": "rock"
+                    },
+                    "attackThree": {
+                        "name": "Earthquake",
+                        "damage": 60,
+                        "type": "ground"
+                    },
+                    "attackFour": {
+                        "name": "Rock Blast",
+                        "damage": 55,
+                        "type": "rock"
+                    }
+                }
+            },
+            "pokemon3": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/112.gif",
+                "pokemonName": "Rhydon",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "ground",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Meteor Blast",
+                        "damage": 45,
+                        "type": "normal"
+                    },
+                    "attackTwo": {
+                        "name": "impale",
+                        "damage": 50,
+                        "type": "normal"
+                    },
+                    "attackThree": {
+                        "name": "Fissure",
+                        "damage": 60,
+                        "type": "ground"
+                    },
+                    "attackFour": {
+                        "name": "Ground Smash",
+                        "damage": 55,
+                        "type": "ground"
+                    }
+                }
+            }
+        },
+        "Misty": {
+            "pokemon1": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/120.gif",
+                "pokemonName": "Staryu",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "water",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Water Gun",
+                        "damage": 30,
+                        "type": "water"
+                    },
+                    "attackTwo": {
+                        "name": "Hydro Pump",
+                        "damage": 30,
+                        "type": "water"
+                    },
+                    "attackThree": {
+                        "name": "Water Gun",
+                        "damage": 35,
+                        "type": "wormal"
+                    },
+                    "attackFour": {
+                        "name": "Hydro Pump",
+                        "damage": 45,
+                        "type": "psychic"
+                    }
+                }
+            },
+            "pokemon2": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/55.gif",
+                "pokemonName": "Golduck",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "water",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Psychoc",
+                        "damage": 40,
+                        "type": "psychic"
+                    },
+                    "attackTwo": {
+                        "name": "Water Gun",
+                        "damage": 40,
+                        "type": "water"
+                    },
+                    "attackThree": {
+                        "name": "Zen Headbutt",
+                        "damage": 50,
+                        "type": "psychic"
+                    },
+                    "attackFour": {
+                        "name": "Aqua Tail",
+                        "damage": 55,
+                        "type": "water"
+                    }
+                },
+                "pokemon3": {
+                    "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/87.gif",
+                    "pokemonName": "Dewgong",
+                    "pokemonLevel": 100,
+                    "pokemonHP": 300,
+                    "pokemonType": "water",
+                    "pokemonAttacks": {
+                        "attackOne": {
+                            "name": "Impale",
+                            "damage": 50,
+                            "type": "normal"
+                        },
+                        "attackTwo": {
+                            "name": "Aurora Beam",
+                            "damage": 45,
+                            "type": "ice"
+                        },
+                        "attackThree": {
+                            "name": "Water Gun",
+                            "damage": 45,
+                            "type": "water"
+                        },
+                        "attackFour": {
+                            "name": "Ice Beam",
+                            "damage": 55,
+                            "type": "ice"
+                        }
+                    }
+                }
+            }
+        },
+        "Lt Surge": {
+            "pokemon1": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/125.gif",
+                "pokemonName": "Electabuzz",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "electric",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Thunder Shock",
+                        "damage": 35,
+                        "type": "electric"
+                    },
+                    "attackTwo": {
+                        "name": "Low Kick",
+                        "damage": 40,
+                        "type": "fighting"
+                    },
+                    "attackThree": {
+                        "name": "Thunder Punch",
+                        "damage": 45,
+                        "type": "electric"
+                    },
+                    "attackFour": {
+                        "name": "Thunder",
+                        "damage": 60,
+                        "type": "electric"
+                    }
+                }
+            },
+            "pokemon2": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/101.gif",
+                "pokemonName": "Electrode",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "electric",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Headbutt",
+                        "damage": 35,
+                        "type": "normal"
+                    },
+                    "attackTwo": {
+                        "name": "Spark",
+                        "damage": 40,
+                        "type": "electric"
+                    },
+                    "attackThree": {
+                        "name": "Thunder Ball",
+                        "damage": 50,
+                        "type": "eletric"
+                    },
+                    "attackFour": {
+                        "name": "Thunder",
+                        "damage": 60,
+                        "type": "eletric"
+                    }
+                }
+            },
+            "pokemon3": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/26.gif",
+                "pokemonName": "Raichu",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "electric",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Quick Attack",
+                        "damage": 35,
+                        "type": "normal"
+                    },
+                    "attackTwo": {
+                        "name": "Thunder Shock",
+                        "damage": 45,
+                        "type": "electric"
+                    },
+                    "attackThree": {
+                        "name": "Thunder Blast",
+                        "damage": 55,
+                        "type": "eletric"
+                    },
+                    "attackFour": {
+                        "name": "Thunder Storm",
+                        "damage": 65,
+                        "type": "eletric"
+                    }
+                }
+            }
+        },
+        "erika": {
+            "pokemon1": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/45.gif",
+                "pokemonName": "Vileplume",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "grass",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Moonblast",
+                        "damage": 40,
+                        "type": "normal"
+                    },
+                    "attackTwo": {
+                        "name": "Petal Dance",
+                        "damage": 45,
+                        "type": "grass"
+                    },
+                    "attackThree": {
+                        "name": "Toxic Fume",
+                        "damage": 40,
+                        "type": "poison"
+                    },
+                    "attackFour": {
+                        "name": "Razor Leaf",
+                        "damage": 55,
+                        "type": "grass"
+                    }
+                }
+            },
+            "pokemon2": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/71.gif",
+                "pokemonName": "Victreebel",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "grass",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Leaf Tornado",
+                        "damage": 45,
+                        "type": "grass"
+                    },
+                    "attackTwo": {
+                        "name": "Mega Bite",
+                        "damage": 45,
+                        "type": "shadow"
+                    },
+                    "attackThree": {
+                        "name": "Razor Leaf",
+                        "damage": 50,
+                        "type": "grass"
+                    },
+                    "attackFour": {
+                        "name": "Wine Whip",
+                        "damage": 45,
+                        "type": "grass"
+                    }
+                }
+            },
+            "pokemon3": {
+                "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/103.gif",
+                "pokemonName": "Exeggutor",
+                "pokemonLevel": 100,
+                "pokemonHP": 300,
+                "pokemonType": "grass",
+                "pokemonAttacks": {
+                    "attackOne": {
+                        "name": "Zen Headbutt",
+                        "damage": 45,
+                        "type": "psychic"
+                    },
+                    "attackTwo": {
+                        "name": "Confusing Shock",
+                        "damage": 40,
+                        "type": "psychic"
+                    },
+                    "attackThree": {
+                        "name": "Solar Beam",
+                        "damage": 65,
+                        "type": "grass"
+                    },
+                    "attackFour": {
+                        "name": "Leaf Storm",
+                        "damage": 55,
+                        "type": "grass"
+                    }
+                }
+            }
+        }
+    }
+]

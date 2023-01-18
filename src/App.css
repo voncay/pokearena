@@ -131,32 +131,104 @@
   text-decoration: none;
 }
 
+.introbattle{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../public/title_bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
 .pteamimg {
   max-width: 50px;
 }
 
 .teamframeintro {
-  position: absolute;
-  left: 25%;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
+
 
 .framePoke {
 
   background-image: url("../src/assets/dia.png");
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: beige;
   margin: 15px;
-  position: relative;
   height: 90px;
   width: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.textFrame{
+.introtextframe{
   font-family: "Poke";
-  font-size: small;
-  position: absolute;
-  margin-bottom:  40px;
+  font-size: 10px;
+  text-transform: capitalize;
+  margin-left: 25px;
+}
+
+.framepoke img{
+
+  width:60px;
+  max-width:60px;
+}
+
+
+
+.gymleaders img {
+
+width: 170px;
+}
+
+.gymleaders img:hover {
+
+  transform: scale(1.15);
+
+
+  }
+
+.gymleadtitle{
+  text-align: center;
+  font-family: "Poke";
+  font-size: 20px;
+
+}
+
+.gymleaders {
+  display: flex;
+  align-items: center;
+justify-content: center;
+align-content: center;
+}
+
+.gymleaders h1{
+font-family: "Poke";
+font-size: 11px;
+line-height: 15px;;
+margin: 10px;
+}
+
+.introtitle{
+  text-align: center;
+  font-family: "Poke";
+  font-size: 20px;
+}
+
+.gymleadcolumn{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+
 }
