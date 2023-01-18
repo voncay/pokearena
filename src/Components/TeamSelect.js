@@ -29,7 +29,7 @@ const TeamSelect = () => {
     //    : team.shift() && setTeam( [...team, e ])
     // remove first element and add new last element
   };
-/*   useEffect(() => {
+  /*   useEffect(() => {
     handleClick();
   }, []); */
   return (

@@ -2,7 +2,7 @@ import aiteam from "./ai.json";
 import { PokeContext } from "../Context/PokeContext";
 import { useContext, useState } from "react";
 
-const BattleBrock = () => {
+const BattleMisty = () => {
   const { value5 } = useContext(PokeContext);
   const [playerTeam, setPlayerTeam] = value5;
   const [turn, setTurn] = useState(0);
@@ -32,11 +32,6 @@ const BattleBrock = () => {
       setBattleTeam();
     }
   };
-
-  console.log(
-    playerTeam[0].sprites.versions["generation-v"]["black-white"].animated
-      .back_default
-  );
 
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
@@ -192,29 +187,15 @@ const BattleBrock = () => {
   // console.log("testy", battleTeam.pokemon1.pokemonAttacks.attackOne.name);
   // console.log("testy2", battleTeam.pokemon1.pokemonAttacks.attackOne.damage);
 
-  console.log(aiteam);
-
   // if pokemon is dead
 
   // if no more pokemon to fight
 
   return (
-    <div className="brockpage">
-      <div className="brockarenaframe">
-        <img
-          className="player1pokemon"
-          src={battleTeam.pokemon1.pokemonImg}
-          alt=""
-        />
-        <h1 className="battlefont">{battleTeam.pokemon1.pokemonName}</h1>
-
-        <h1 className="battlefont">
-          {" "}
-          {battleTeam.pokemon1.pokemonAttacks.attackOne.name}{" "}
-        </h1>
-      </div>
+    <div className="mistypage">
+      <div className="mistyarenaframe"></div>
     </div>
   );
 };
 
-export default BattleBrock;
+export default BattleMisty;

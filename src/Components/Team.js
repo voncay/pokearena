@@ -6,7 +6,6 @@ const Team = () => {
   const [team, setTeam] = value4;
   const [load, setLoad] = value1;
   const [playerTeam, setPlayerTeam] = value5;
-  
 
   console.log(team);
   const handleDelete = (e) => {
@@ -46,7 +45,7 @@ const Team = () => {
       )
     );
     setPlayerTeam(responses);
-    setLoad(true)
+    setLoad(true);
   };
   // console.log(playerTeam)
 
