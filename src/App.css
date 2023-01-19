@@ -408,163 +408,144 @@
   text-shadow: 2px 2px 1px #f8f8f8;
 }
 
-.infoframeleft{
+.infoframeleft {
   width: 140px;
   position: fixed;
   top: 28.5%;
   left: 19.5%;
 }
 
-.arenafightmenu{
-
+.arenafightmenu {
   z-index: 1;
 
   font-weight: bolder;
   font-family: "Poke";
   font-size: 14px;
-  text-transform:uppercase;
+  text-transform: uppercase;
   position: fixed;
   top: 68.5%;
   left: 53.5%;
   border: none;
-
 }
 
-.arenapokemonmenu{
+.arenapokemonmenu {
   z-index: 1;
 
   font-weight: bolder;
   font-family: "Poke";
   font-size: 14px;
-  text-transform:uppercase;
+  text-transform: uppercase;
   position: fixed;
   top: 64.1%;
   left: 53.5%;
   border: none;
 }
 
-.arenapokemonmenuframe{
+.arenapokemonmenuframe {
   width: 400px;
 }
 
-.arenapokemonmenu:hover{
-
+.arenapokemonmenu:hover {
   transform: scale(1.15);
-
 }
 
-.arenafightmenu:hover{
-
+.arenafightmenu:hover {
   transform: scale(1.15);
-
 }
 
-
-.movesframedialog{
-  z-index:2;
+.movesframedialog {
+  z-index: 2;
   width: 250px;
-  position:absolute;
-  top:73%;
-  left: 55%
+  position: absolute;
+  top: 73%;
+  left: 55%;
 }
 
-.movelistarena{
-  z-index:3;
-  width:200px;
+.movelistarena {
+  z-index: 3;
+  width: 200px;
   max-height: 40px;
-font-family: "Poke";
-font-size: 5px;
-position: absolute;
-text-transform: capitalize;
-top:78%;
-left: 60%;
-display: flex;
-flex-wrap: wrap;
-align-items: center;
+  font-family: "Poke";
+  font-size: 5px;
+  position: absolute;
+  text-transform: capitalize;
+  top: 78%;
+  left: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.movelistarena h1{
-
+.movelistarena h1 {
   margin: 5px;
-
 }
 
-.closemoves{
-  z-index:4;
-  width:14px;
+.closemoves {
+  z-index: 4;
+  width: 14px;
   position: absolute;
   top: 76%;
   left: 57%;
 }
 
-.movelistarena h1:hover{
-
+.movelistarena h1:hover {
   transform: scale(1.1);
-
 }
 
-.closearenafightmenu{
-
+.closearenafightmenu {
   font-weight: bolder;
   font-family: "Poke";
   font-size: 14px;
-  text-transform:uppercase;
+  text-transform: uppercase;
   position: fixed;
   top: 64.1%;
   left: 53.5%;
   border: none;
-
 }
 
+.teamframearenamenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
-.teamframearenamenu{
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-.pokemonlistinbattle{
-
+.pokemonlistinbattle {
   position: absolute;
   left: 21%;
-  border:2px solid black;
-  display:flex;
+  border: 2px solid black;
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.listtest{
+.listtest {
   z-index: 4;
   background-color: #f8f8f8;
-  width:500px;
+  width: 500px;
   display: flex;
   justify-content: center;
   position: absolute;
-  left:0;
-right:0;
-margin-left:auto;
-margin-right:auto;
-border: 4px solid black;
-border-radius: 5px;
-top: -18%
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px solid black;
+  border-radius: 5px;
+  top: -18%;
 }
 
-.pokelisttext{
-
-font-family: "Poke";
-font-size: 15px;
-text-align: center;
-margin-top: 20px;
-
+.pokelisttext {
+  font-family: "Poke";
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
 }
 
-.closepokelist{
-
+.closepokelist {
   width: 25px;
   position: absolute;
   top: 3%;
-  left: 3%
+  left: 3%;
 }
