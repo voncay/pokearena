@@ -13,7 +13,7 @@ const IntroBattle = () => {
 
   return (
     <div className="introbattle">
-      <h1 className="introtitle">You team is ready to battle !</h1>
+      <h1 className="introtitle">Your team is ready to battle !</h1>
 
       <div className="teamframeintro">
         {playerTeam.length === 4 &&

@@ -14,7 +14,7 @@ const Router = () => {
 
   return (
     <>
-      {location.pathname !== "/" ? <BackHome /> : null}
+      {/* {location.pathname !== "/" ? <BackHome /> : null} */}
 
       <Routes>
         <Route path="/" element={<Homepage />} />
