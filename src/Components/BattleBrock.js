@@ -1,6 +1,7 @@
 import aiteam from "./ai.json";
 import { PokeContext } from "../Context/PokeContext";
 import { useContext, useState } from "react";
+import Overlay from "react-overlay-component";
 
 const BattleBrock = () => {
   const { value5 } = useContext(PokeContext);
@@ -9,6 +10,675 @@ const BattleBrock = () => {
   const [myTeamStatus, setMyTeamStatus] = useState([1, 1, 1, 1]);
   const [ennemyTeamStatus, setennemyTeamStatus] = useState([1, 1, 1]);
   const [badges, setBadges] = useState([0, 0, 0, 0]);
+
+  const [isOpen, setOverlay] = useState(false);
+  const closeOverlay = () => setOverlay(false);
+
+  const [isOpen1, setOverlay1] = useState(false);
+  const closeOverlay1 = () => setOverlay1(false);
+
+  const [isOpen2, setOverlay2] = useState(false);
+  const closeOverlay2 = () => setOverlay2(false);
+
+  const [isOpen3, setOverlay3] = useState(false);
+  const closeOverlay3 = () => setOverlay3(false);
+
+  const [showMoves, setShowMoves] = useState(false)
+  const [showPokeList, setShowPokeList] = useState(false)
+
+  const [showPokemon1, setShowPokemon1] = useState(true)
+  const [showPokemon2, setShowPokemon2] = useState(false)
+  const [showPokemon3, setShowPokemon3] = useState(false)
+  const [showPokemon4, setShowPokemon4] = useState(false)
+
+
+  
+
+
+  const Moves = () => {
+return(
+  <>
+  <img className="movesframedialog" src="/dialog_frame_bgon.png" alt="" />
+
+  <img    onClick={() => 
+           setShowMoves(!showMoves)}className="closemoves" src="/closemove.png" alt="" />
+
+    <div className="movelistarena" >
+    <h1>
+  {battleTeam.pokemon1.pokemonAttacks.attackOne.name}
+    </h1>
+    <h1>
+  {battleTeam.pokemon1.pokemonAttacks.attackTwo.name}
+    </h1>
+    <h1>
+  {battleTeam.pokemon1.pokemonAttacks.attackThree.name}
+    </h1>
+    <h1>
+  {battleTeam.pokemon1.pokemonAttacks.attackFour.name}
+    </h1>
+     </div>
+     </>
+)
+  }
+
+
+  const PokeList = () => {
+    return(
+      <div className="listtest">
+      <div classname="pokemonlistinbattle">
+      <h1 className="pokelisttext">Switch Pokemon ?</h1>
+      <img    onClick={() => 
+           setShowPokeList(!showPokeList)}className="closepokelist" src="/closemove.png" alt="" />
+      <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[0].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon1.pokemonName} <br />
+                      Type : {battleTeam.pokemon1.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[1].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon2.pokemonName} <br />
+                      Type : {battleTeam.pokemon2.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[2].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon3.pokemonName} <br />
+                      Type : {battleTeam.pokemon3.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[3].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon4.pokemonName} <br />
+                      Type : {battleTeam.pokemon4.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+            
+
+      </div>
+ 
+         </div>
+    )
+      }
+
+
+
+
+
+
+
+console.log(playerTeam)
+
+  const configs = {
+    animate: true,
+  };
+
+  const configs1 = {
+    animate: true,
+  };
+  const configs2 = {
+    animate: true,
+  };
+  const configs3 = {
+    animate: true,
+  };
+
+const ShowActivePokemon1 = () => {
+
+  return(
+
+    <div className="brockpage">
+    <div className="brockarenaframe">
+      <img
+        className="player1pokemon"
+        src={battleTeam.pokemon1.pokemonImg}
+        alt=""
+      />
+      <button
+        className="arenafightmenu"
+        onClick={() => 
+         setShowMoves(!showMoves)}
+      >
+        Fight
+      </button>
+      {showMoves ? <Moves /> : null}
+
+      <button
+        className="arenapokemonmenu"
+        onClick={() => {
+          setShowPokeList(!showPokeList);
+        }}
+      >
+        Pokemon
+      </button>
+        {showPokeList ? <PokeList /> : null}
+
+      <img
+        className="dialogframearenap1"
+        src="/dialog_frame_bgon.png"
+        alt=""
+      />
+      <img className="infoframeright" src="/info_frame_right.png" alt="" />
+
+      <p className="p1pokemoninfos">
+        {battleTeam.pokemon1.pokemonName}
+        <br />
+        Level : {battleTeam.pokemon1.pokemonLevel}
+        <br />
+        HP : {battleTeam.pokemon1.pokemonHP}
+      </p>
+
+      <p className="p2pokemoninfos">
+        {battleTeam.pokemon1.pokemonName}
+        <br />
+        Level : {battleTeam.pokemon1.pokemonLevel}
+        <br />
+        HP : {battleTeam.pokemon1.pokemonHP}
+      </p>
+      <img className="infoframeleft" src="/info_frame_left.png" alt="" />
+    </div>
+  </div>
+
+
+  )
+}
+
+
+const ShowActivePokemon2 = () => {
+
+  return(
+
+    <div className="brockpage">
+    <div className="brockarenaframe">
+      <img
+        className="player1pokemon"
+        src={battleTeam.pokemon2.pokemonImg}
+        alt=""
+      />
+      <button
+        className="arenafightmenu"
+        onClick={() => 
+         setShowMoves(!showMoves)}
+      >
+        Fight
+      </button>
+      {showMoves ? <Moves /> : null}
+
+      <button
+        className="arenapokemonmenu"
+        onClick={() => {
+          setOverlay1(true);
+        }}
+      >
+        Pokemon
+      </button>
+      <Overlay configs={configs1} isOpen={isOpen1} closeOverlay={closeOverlay2}>
+        <div className="arenapokemonmenuframe">
+          <div className="teamframearenamenu">
+
+          <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[0].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon1.pokemonName} <br />
+                      Type : {battleTeam.pokemon1.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[1].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon2.pokemonName} <br />
+                      Type : {battleTeam.pokemon2.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[2].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon3.pokemonName} <br />
+                      Type : {battleTeam.pokemon3.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[3].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon4.pokemonName} <br />
+                      Type : {battleTeam.pokemon4.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+              
+          </div>
+        </div>
+      
+      </Overlay>
+
+      <img
+        className="dialogframearenap1"
+        src="/dialog_frame_bgon.png"
+        alt=""
+      />
+      <img className="infoframeright" src="/info_frame_right.png" alt="" />
+
+      <p className="p1pokemoninfos">
+        {battleTeam.pokemon2.pokemonName}
+        <br />
+        Level : {battleTeam.pokemon2.pokemonLevel}
+        <br />
+        HP : {battleTeam.pokemon2.pokemonHP}
+      </p>
+
+      <p className="p2pokemoninfos">
+        {battleTeam.pokemon2.pokemonName}
+        <br />
+        Level : {battleTeam.pokemon2.pokemonLevel}
+        <br />
+        HP : {battleTeam.pokemon2.pokemonHP}
+      </p>
+      <img className="infoframeleft" src="/info_frame_left.png" alt="" />
+    </div>
+  </div>
+
+
+  )
+}
+
+const ShowActivePokemon3 = () => {
+
+  return(
+
+    <div className="brockpage">
+    <div className="brockarenaframe">
+      <img
+        className="player1pokemon"
+        src={battleTeam.pokemon3.pokemonImg}
+        alt=""
+      />
+      <button
+        className="arenafightmenu"
+        onClick={() => 
+         setShowMoves(!showMoves)}
+      >
+        Fight
+      </button>
+      {showMoves ? <Moves /> : null}
+
+      <button
+        className="arenapokemonmenu"
+        onClick={() => {
+          setOverlay2(true);
+        }}
+      >
+        Pokemon
+      </button>
+      <Overlay configs={configs2} isOpen={isOpen2} closeOverlay={closeOverlay2}>
+        <div className="arenapokemonmenuframe">
+          <div className="teamframearenamenu">
+            
+          <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[0].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon1.pokemonName} <br />
+                      Type : {battleTeam.pokemon1.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[1].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon2.pokemonName} <br />
+                      Type : {battleTeam.pokemon2.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[2].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon3.pokemonName} <br />
+                      Type : {battleTeam.pokemon3.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[3].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon4.pokemonName} <br />
+                      Type : {battleTeam.pokemon4.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+              
+          </div>
+        </div>
+      
+      </Overlay>
+
+      <img
+        className="dialogframearenap1"
+        src="/dialog_frame_bgon.png"
+        alt=""
+      />
+      <img className="infoframeright" src="/info_frame_right.png" alt="" />
+
+      <p className="p1pokemoninfos">
+        {battleTeam.pokemon3.pokemonName}
+        <br />
+        Level : {battleTeam.pokemon3.pokemonLevel}
+        <br />
+        HP : {battleTeam.pokemon3.pokemonHP}
+      </p>
+
+      <p className="p2pokemoninfos">
+        {battleTeam.pokemon3.pokemonName}
+        <br />
+        Level : {battleTeam.pokemon3.pokemonLevel}
+        <br />
+        HP : {battleTeam.pokemon3.pokemonHP}
+      </p>
+      <img className="infoframeleft" src="/info_frame_left.png" alt="" />
+    </div>
+  </div>
+
+
+  )
+}
+
+
+const ShowActivePokemon4 = () => {
+
+  return(
+
+    <div className="brockpage">
+    <div className="brockarenaframe">
+      <img
+        className="player1pokemon"
+        src={battleTeam.pokemon4.pokemonImg}
+        alt=""
+      />
+      <button
+        className="arenafightmenu"
+        onClick={() => 
+         setShowMoves(!showMoves)}
+      >
+        Fight
+      </button>
+      {showMoves ? <Moves /> : null}
+
+      <button
+        className="arenapokemonmenu"
+        onClick={() => {
+          setOverlay3(true);
+        }}
+      >
+        Pokemon
+      </button>
+      <Overlay configs={configs3} isOpen={isOpen3} closeOverlay={closeOverlay3}>
+        <div className="arenapokemonmenuframe">
+          <div className="teamframearenamenu">
+          
+          <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[0].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon1.pokemonName} <br />
+                      Type : {battleTeam.pokemon1.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[1].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon2.pokemonName} <br />
+                      Type : {battleTeam.pokemon2.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[2].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon3.pokemonName} <br />
+                      Type : {battleTeam.pokemon3.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+                <div className="framePoke">
+                  <img
+                    className="pteamimg"
+                    src={
+                      playerTeam[3].sprites.versions["generation-v"]["black-white"]
+                        .animated.front_default
+                    }
+                    alt=""
+                  />
+                  <div className="introtextframe">
+                    <p>
+                      {" "}
+                      Name : {battleTeam.pokemon4.pokemonName} <br />
+                      Type : {battleTeam.pokemon4.pokemonType}
+                      <br />
+                      Level : 100
+                    </p>
+                  </div>
+                </div>
+              
+          </div>
+        </div>
+      
+      </Overlay>
+
+      <img
+        className="dialogframearenap1"
+        src="/dialog_frame_bgon.png"
+        alt=""
+      />
+      <img className="infoframeright" src="/info_frame_right.png" alt="" />
+
+      <p className="p1pokemoninfos">
+        {battleTeam.pokemon4.pokemonName}
+        <br />
+        Level : {battleTeam.pokemon4.pokemonLevel}
+        <br />
+        HP : {battleTeam.pokemon4.pokemonHP}
+      </p>
+
+      <p className="p2pokemoninfos">
+        {battleTeam.pokemon4.pokemonName}
+        <br />
+        Level : {battleTeam.pokemon4.pokemonLevel}
+        <br />
+        HP : {battleTeam.pokemon4.pokemonHP}
+      </p>
+      <img className="infoframeleft" src="/info_frame_left.png" alt="" />
+    </div>
+  </div>
+
+
+  )
+}
+
+
+
 
   const badgesCondition = (initialValueBadges) =>
     badges.reduce(
@@ -192,28 +862,108 @@ const BattleBrock = () => {
   // console.log("testy", battleTeam.pokemon1.pokemonAttacks.attackOne.name);
   // console.log("testy2", battleTeam.pokemon1.pokemonAttacks.attackOne.damage);
 
-  console.log(aiteam);
+  console.log(battleTeam);
 
   // if pokemon is dead
 
   // if no more pokemon to fight
 
   return (
-    <div className="brockpage">
-      <div className="brockarenaframe">
-        <img
-          className="player1pokemon"
-          src={battleTeam.pokemon1.pokemonImg}
-          alt=""
-        />
-        <h1 className="battlefont">{battleTeam.pokemon1.pokemonName}</h1>
+    <>
+    <ShowActivePokemon1 />
+    {showPokemon2 ? <ShowActivePokemon2 /> :    <ShowActivePokemon1 />
+ }
+    {showPokemon3 ? <ShowActivePokemon3 /> :     <ShowActivePokemon1 />
+}
+    {showPokemon4 ? <ShowActivePokemon4 /> :     <ShowActivePokemon1 />
+}
 
-        <h1 className="battlefont">
-          {" "}
-          {battleTeam.pokemon1.pokemonAttacks.attackOne.name}{" "}
-        </h1>
-      </div>
-    </div>
+
+
+  
+
+    </>
+    
+
+    // <div className="brockpage">
+    //   <div className="brockarenaframe">
+    //     <img
+    //       className="player1pokemon"
+    //       src={battleTeam.pokemon1.pokemonImg}
+    //       alt=""
+    //     />
+    //     <button
+    //       className="arenafightmenu"
+    //       onClick={() => 
+    //        setShowMoves(!showMoves)}
+    //     >
+    //       Fight
+    //     </button>
+    //     {showMoves ? <Moves /> : null}
+
+    //     <button
+    //       className="arenapokemonmenu"
+    //       onClick={() => {
+    //         setOverlay(true);
+    //       }}
+    //     >
+    //       Pokemon
+    //     </button>
+    //     <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
+    //       <div className="arenapokemonmenuframe">
+    //         <div className="teamframearenamenu">
+    //           {playerTeam.length === 4 &&
+    //             playerTeam.map((e, i) => (
+    //               <div className="framePoke">
+    //                 <img
+    //                   className="pteamimg"
+    //                   src={
+    //                     e.sprites.versions["generation-v"]["black-white"]
+    //                       .animated.front_default
+    //                   }
+    //                   alt=""
+    //                 />
+    //                 <div className="introtextframe">
+    //                   <p>
+    //                     {" "}
+    //                     Name : {e.name} <br />
+    //                     Type : {e.types[0].type.name}
+    //                     <br />
+    //                     Level : 100
+    //                   </p>
+    //                 </div>
+    //               </div>
+    //             ))}
+    //         </div>
+    //       </div>
+        
+    //     </Overlay>
+
+    //     <img
+    //       className="dialogframearenap1"
+    //       src="/dialog_frame_bgon.png"
+    //       alt=""
+    //     />
+    //     <img className="infoframeright" src="/info_frame_right.png" alt="" />
+
+    //     <p className="p1pokemoninfos">
+    //       {battleTeam.pokemon1.pokemonName}
+    //       <br />
+    //       Level : {battleTeam.pokemon1.pokemonLevel}
+    //       <br />
+    //       HP : {battleTeam.pokemon1.pokemonHP}
+    //     </p>
+
+    //     <p className="p2pokemoninfos">
+    //       {battleTeam.pokemon1.pokemonName}
+    //       <br />
+    //       Level : {battleTeam.pokemon1.pokemonLevel}
+    //       <br />
+    //       HP : {battleTeam.pokemon1.pokemonHP}
+    //     </p>
+    //     <img className="infoframeleft" src="/info_frame_left.png" alt="" />
+    //   </div>
+    // </div>
   );
 };
 
