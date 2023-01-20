@@ -495,7 +495,7 @@ console.log(aiteam)
           />
           <img className="infoframeright" src="/info_frame_right.png" alt="" />
 
-          <p className="p1pokemoninfoserikaerika">
+          <p className="p1pokemoninfos">
             {battleTeam.pokemon1.pokemonName}
             <br />
             Level : {battleTeam.pokemon1.pokemonLevel}
@@ -503,7 +503,7 @@ console.log(aiteam)
             HP : {playerHealth}
           </p>
 
-          <p className="p2pokemoninfoserikaerika">
+          <p className="p2pokemoninfos">
             {opponent.pokemonName}
             <br />
             Level : {opponent.pokemonLevel}
@@ -550,14 +550,14 @@ console.log(aiteam)
             alt=""
           />
           <img className="infoframeright" src="/info_frame_right.png" alt="" />
-          <p className="p1pokemoninfoserika">
+          <p className="p1pokemoninfos">
             {battleTeam.pokemon2.pokemonName}
             <br />
             Level : {battleTeam.pokemon2.pokemonLevel}
             <br />
             HP : {battleTeam.pokemon2.pokemonHP}
           </p>
-          <p className="p2pokemoninfoserika">
+          <p className="p2pokemoninfos">
             {aiteam.Erika.pokemon1.pokemonName}
             <br />
             Level : {aiteam.Erika.pokemon1.pokemonLevel}
@@ -606,7 +606,7 @@ console.log(aiteam)
           />
           <img className="infoframeright" src="/info_frame_right.png" alt="" />
 
-          <p className="p1pokemoninfoserika">
+          <p className="p1pokemoninfos">
             {battleTeam.pokemon3.pokemonName}
             <br />
             Level : {battleTeam.pokemon3.pokemonLevel}
@@ -614,7 +614,7 @@ console.log(aiteam)
             HP : {battleTeam.pokemon3.pokemonHP}
           </p>
 
-          <p className="p2pokemoninfoserika">
+          <p className="p2pokemoninfos">
             {battleTeam.pokemon3.pokemonName}
             <br />
             Level : {battleTeam.pokemon3.pokemonLevel}
@@ -661,7 +661,7 @@ console.log(aiteam)
           />
           <img className="infoframeright" src="/info_frame_right.png" alt="" />
 
-          <p className="p1pokemoninfoserika">
+          <p className="p1pokemoninfos">
             {battleTeam.pokemon4.pokemonName}
             <br />
             Level : {battleTeam.pokemon4.pokemonLevel}
@@ -669,7 +669,7 @@ console.log(aiteam)
             HP : {battleTeam.pokemon4.pokemonHP}
           </p>
 
-          <p className="p2pokemoninfoserika">
+          <p className="p2pokemoninfos">
             {battleTeam.pokemon4.pokemonName}
             <br />
             Level : {battleTeam.pokemon4.pokemonLevel}
@@ -802,7 +802,7 @@ console.log(aiteam)
     //     />
     //     <img className="infoframeright" src="/info_frame_right.png" alt="" />
 
-    //     <p className="p1pokemoninfoserika">
+    //     <p className="p1pokemoninfos">
     //       {battleTeam.pokemon1.pokemonName}
     //       <br />
     //       Level : {battleTeam.pokemon1.pokemonLevel}
@@ -810,7 +810,7 @@ console.log(aiteam)
     //       HP : {battleTeam.pokemon1.pokemonHP}
     //     </p>
 
-    //     <p className="p2pokemoninfoserika">
+    //     <p className="p2pokemoninfos">
     //       {battleTeam.pokemon1.pokemonName}
     //       <br />
     //       Level : {battleTeam.pokemon1.pokemonLevel}

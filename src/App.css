@@ -399,6 +399,8 @@
 }
 
 .p1pokemoninfos {
+  z-index: 3;
+
   font-weight: bolder;
   font-family: "Poke";
   font-size: 12px;
@@ -422,40 +424,20 @@
   font-size: 12px;
   text-transform: capitalize;
   position: fixed;
-  top: 25.1%;
+  top: 26.1%;
   left: 20.7%;
   text-shadow: 2px 2px 1px #f8f8f8;
 }
 
-.p2pokemoninfoserika {
-  font-weight: bolder;
-  font-family: "Poke";
-  font-size: 12px;
-  text-transform: capitalize;
-  position: fixed;
-  top: 25.1%;
-  left: 20.7%;
-  color: rgb(0, 0, 0);
-}
 
-.p1pokemoninfoserika {
 
-  z-index: 3;
-  font-weight: bolder;
-  font-family: "Poke";
-  font-size: 12px;
-  text-transform: capitalize;
-  position: fixed;
-  top: 50.4%;
-  left: 55.5%;
-  color: rgb(0, 0, 0);
-}
+
 
 
 .infoframeleft {
   width: 140px;
   position: fixed;
-  top: 28.5%;
+  top: 29.5%;
   left: 19.5%;
 }
 
