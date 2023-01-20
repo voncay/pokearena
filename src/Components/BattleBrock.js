@@ -9,7 +9,8 @@ const BattleBrock = () => {
   const [playerTeam, setPlayerTeam] = value5;
   const [battleTeam, setBattleTeam] = useState({
     pokemon1: {
-      pokemonImg: playerTeam[0].sprites.back_default,
+      pokemonImg: playerTeam[0].sprites.versions["generation-v"]["black-white"].animated
+      .back_default,
       pokemonName: playerTeam[0].name,
       pokemonLevel: 100,
       pokemonHP: 300,

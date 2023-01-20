@@ -36,7 +36,7 @@ const TeamSelect = () => {
     <div className="teamselect">
       <h1>Select your team !</h1>
 
-      <div className="frameteamselect">
+     <div className="frameteamselect">
         {pokemon.map((e, i) => {
           return (
             <div key={e.name} className="pokelist">

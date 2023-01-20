@@ -179,7 +179,7 @@
                 }
             }
         },
-        "Lt Surge": {
+        "LtSurge": {
             "pokemon1": {
                 "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/125.gif",
                 "pokemonName": "Electabuzz",
@@ -268,7 +268,7 @@
                 }
             }
         },
-        "erika": {
+        "Erika": {
             "pokemon1": {
                 "pokemonImg" :"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/45.gif",
                 "pokemonName": "Vileplume",
